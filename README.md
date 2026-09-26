@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kaamgar (working title)
+
+A dual-role marketplace connecting hirers and workers for any local, in-person job or service — skilled or unskilled — starting in Mumbai. Built as a Next.js Progressive Web App (TypeScript, Tailwind, MongoDB).
+
+## Documentation
+
+Full product and technical documentation lives in [`/docs`](./docs):
+
+| Document | Covers |
+|---|---|
+| `PRD.docx` | Scope, access model, functional requirements |
+| `DataModel.docx` | MongoDB schema, indexes, entity relationships |
+| `TRD.docx` | System architecture, security, hosting |
+| `APISpec.docx` | Every endpoint, request/response shapes |
+| `UserFlows.docx` | Visual flow diagrams for core journeys |
+| `DesignSystem.docx` | Colour palette, typography, screen mockups |
+
+Start with the PRD if you're new to the project — everything else builds on it.
+
+## Tech Stack
+
+- **Framework:** Next.js (App Router), TypeScript
+- **Styling:** Tailwind CSS
+- **Database:** MongoDB (Atlas), with 2dsphere geospatial indexing
+- **Auth:** Phone + OTP, access/refresh token pair
+- **Payments:** Razorpay (UPI rails)
+- **Platform:** PWA, packaged for Play Store via Trusted Web Activity (TWA)
+- **Languages:** English, Hindi, Marathi
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
+cp .env.example .env.local   # fill in your own keys
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Status
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Early development. See the PRD's "Open Questions" section for decisions still pending (monetization model, cancellation penalty policy, final product name).
