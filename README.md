@@ -1,4 +1,4 @@
-# Kaamgar (working title)
+# Pistos Connection
 
 A dual-role marketplace connecting hirers and workers for any local, in-person job or service — skilled or unskilled — starting in Mumbai. Built as a Next.js Progressive Web App (TypeScript, Tailwind, MongoDB).
 
